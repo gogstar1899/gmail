@@ -1,5 +1,15 @@
 pipeline {
-  agent any
+  agent none
+  stages {
+    stage('Ruby Install') {
+        agent {
+            docker {
+                image 'gmail'
+                }
+            }
+        }
+    }
+        }
   stages {
     stage('version') {
       steps {
@@ -12,4 +22,3 @@ pipeline {
       }
     }
   }
-}
