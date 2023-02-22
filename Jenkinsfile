@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('send_mail') {
       steps {
-        sh 'docker run -it gmail'
+        sh 'ruby config.rb'
       }
     }
   }
