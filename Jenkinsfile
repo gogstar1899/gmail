@@ -1,18 +1,10 @@
 pipeline {
-  agent none
-  stages {
-    stage('Ruby Install') {
-        agent {
-            docker {
-                image 'gmail'
-                }
-            }
-        }
-    }
-        }
+  agent any
   stages {
     stage('version') {
       steps {
+        sh 'rbenv install 3.1.3'
+        sh 'rbenv local 3.1.3'
         sh 'ruby --version'
       }
     }
@@ -22,3 +14,4 @@ pipeline {
       }
     }
   }
+}
