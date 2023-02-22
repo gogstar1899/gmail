@@ -10,6 +10,6 @@ RUN bundle install
 
 COPY . .
 
-# RUN chmod +x run_config.sh
+RUN chmod +x run_config.sh
 
-# ENTRYPOINT [ "ruby", "config.rb" ]
+ENTRYPOINT [ "ruby", "config.rb" ]
