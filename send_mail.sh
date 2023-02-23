@@ -1,4 +1,3 @@
 #!/bin/bash
 
-docker build -t gmail .
-docker run -it gmail .
+ruby config.rb
