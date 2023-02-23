@@ -13,10 +13,11 @@ pipeline {
         }
         stage("Build"){
           steps {
-              dir("gmail")
+              dir("gmail") {
                sh "gem install bundler"
                sh "bundle install"
                sh "ruby config.rb"
+              }
           }
         }
     }
