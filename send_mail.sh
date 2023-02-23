@@ -1,4 +1,3 @@
 #!/bin/bash
 
-bundle install
-ruby config.rb
+docker run -it gmail .
